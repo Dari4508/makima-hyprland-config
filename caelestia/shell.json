@@ -1,0 +1,174 @@
+{
+  "appearance": {
+    "rounding": { "scale": 1 },
+    "spacing": { "scale": 1 },
+    "padding": { "scale": 1 },
+    "font": {
+      "scale": 1,
+      "headline": { "family": "", "large": { "size": 32, "weight": 500 }, "medium": { "size": 28, "weight": 500 }, "small": { "size": 24, "weight": 500 } },
+      "title": { "family": "", "large": { "size": 22, "weight": 500 }, "medium": { "size": 16, "weight": 500 }, "small": { "size": 14, "weight": 500 } },
+      "body": { "family": "", "large": { "size": 16 }, "medium": { "size": 14 }, "small": { "size": 12 } },
+      "label": { "family": "", "large": { "size": 14, "weight": 500 }, "medium": { "size": 12, "weight": 500 }, "small": { "size": 11 } },
+      "mono": { "family": "", "large": { "size": 16, "vaxes": {} }, "medium": { "size": 14, "vaxes": {} }, "small": { "size": 12, "vaxes": {} } },
+      "icon": { "family": "Material Symbols Rounded", "extraLarge": { "size": 36 }, "large": { "size": 24 }, "medium": { "size": 18 }, "small": { "size": 15 } }
+    },
+    "anim": {
+      "durations": { "scale": 0.35 }
+    },
+    "transparency": { "enabled": false }
+  },
+  "general": {
+    "logo": "",
+    "language": "",
+    "showOverFullscreen": false,
+    "mediaGifSpeedAdjustment": 300,
+    "sessionGifSpeed": 0.7,
+    "apps": { "terminal": ["kitty"], "audio": ["pwvucontrol"], "playback": ["mpv"], "explorer": ["dolphin"] },
+    "idle": {
+      "lockBeforeSleep": true,
+      "inhibitWhenAudio": true,
+      "inhibitWhenCharging": false,
+      "timeouts": [
+        { "timeout": 180, "idleAction": "lock" },
+        { "timeout": 300, "idleAction": "dpms off", "returnAction": "dpms on" },
+        { "timeout": 600, "idleAction": ["suspendThenHibernate"] }
+      ]
+    },
+    "battery": {
+      "warnLevels": [
+        { "level": 20, "title": "Low battery", "message": "You might want to plug in a charger", "icon": "battery_android_frame_2" },
+        { "level": 10, "title": "Did you see the previous message?", "message": "You should probably plug in a charger <b>now</b>", "icon": "battery_android_frame_1" },
+        { "level": 5, "title": "Critical battery level", "message": "PLUG THE CHARGER RIGHT NOW!!", "icon": "battery_android_alert", "critical": true }
+      ],
+      "criticalLevel": 3
+    }
+  },
+  "background": {
+    "enabled": true,
+    "wallpaperEnabled": true,
+    "desktopClock": {
+      "enabled": false,
+      "scale": 1.0,
+      "position": "bottom-right",
+      "invertColors": false,
+      "background": { "enabled": false, "opacity": 0.7, "blur": true },
+      "shadow": { "enabled": true, "opacity": 0.7, "blur": 0.4 }
+    },
+    "visualiser": { "enabled": false, "autoHide": true, "blur": false, "rounding": 1, "spacing": 1 }
+  },
+  "bar": {
+    "enabled": true,
+    "height": 36,
+    "margin": { "top": 8, "bottom": 0, "left": 8, "right": 8 },
+    "radius": 18,
+    "blur": { "enabled": false, "size": 8, "passes": 2 },
+    "shadow": { "enabled": true, "range": 15, "renderPower": 4, "opacity": 0.3 },
+    "border": { "enabled": false, "width": 1, "color": "00000000" },
+    "autoHide": "fullscreen",
+    "autoHideDelay": 500,
+    "statusIcons": {
+      "values": [
+        { "id": "audio", "enabled": true },
+        { "id": "microphone", "enabled": false },
+        { "id": "kbLayout", "enabled": true },
+        { "id": "network", "enabled": true },
+        { "id": "battery", "enabled": true },
+        { "id": "tray", "enabled": true },
+        { "id": "lockStatus", "enabled": true }
+      ]
+    },
+    "workspaces": {
+      "enabled": true,
+      "format": "index",
+      "showEmpty": true,
+      "showSpecial": true,
+      "specialIcon": "widgets",
+      "maxCount": 10
+    },
+    "clock": { "enabled": true, "format": "%H:%M", "showSeconds": false },
+    "battery": { "enabled": true, "showPercentage": true, "showIcon": true },
+    "network": { "enabled": true, "showSpeed": false },
+    "audio": { "enabled": true },
+    "mpris": { "enabled": true, "maxTitleLength": 40 },
+    "tray": { "enabled": true, "iconSize": 18, "spacing": 4 }
+  },
+  "border": {
+    "enabled": true,
+    "width": 1,
+    "radius": 15,
+    "activeColor": "primary",
+    "inactiveColor": "onSurfaceVariant",
+    "colorAlpha": 0.9
+  },
+  "dashboard": { "enabled": true, "tabs": ["media", "performance", "weather"] },
+  "launcher": {
+    "enabled": true,
+    "terminal": "kitty",
+    "useFuzzy": { "apps": true, "wallpapers": true },
+    "categories": ["applications", "settings", "wallpapers", "emoji"]
+  },
+  "lock": {
+    "enabled": true,
+    "background": { "enabled": true, "blur": true, "blurSize": 20, "brightness": 0.3 },
+    "clock": { "enabled": true, "format": "%H:%M", "showDate": true, "dateFormat": "%A, %d %B" },
+    "notifications": { "enabled": true, "maxCount": 5 },
+    "quickActions": { "enabled": true, "actions": ["sleep", "reboot", "poweroff"] }
+  },
+  "nexus": {
+    "enabled": true,
+    "width": 480,
+    "pages": ["wallandstyle", "panels", "services", "audio", "bluetooth", "network", "language"]
+  },
+  "notifs": {
+    "enabled": true,
+    "maxVisible": 5,
+    "timeout": 5000,
+    "criticalTimeout": 0,
+    "position": "top-right",
+    "groupByApp": true
+  },
+  "osd": {
+    "enabled": true,
+    "timeout": 1500,
+    "position": "bottom",
+    "showIcon": true,
+    "showValue": true
+  },
+  "services": {
+    "weatherLocation": "",
+    "weatherUnits": "auto",
+    "sensorUnits": "celsius",
+    "dataUnits": "binary",
+    "clockFormat": "auto",
+    "gpuType": "auto",
+    "visualiserBars": 60,
+    "audioIncrement": 0.1,
+    "brightnessIncrement": 0.1,
+    "maxVolume": 1.0,
+    "smartScheme": true,
+    "defaultPlayer": "Spotify",
+    "playerAliases": [{ "from": "com.github.th_ch.youtube_music", "to": "YT Music" }],
+    "lyricsBackend": "auto"
+  },
+  "session": {
+    "enabled": true,
+    "confirmShutdown": true,
+    "confirmReboot": true,
+    "confirmLogout": false
+  },
+  "sidebar": {
+    "enabled": true,
+    "width": 400,
+    "showNotifications": true,
+    "showQuickSettings": true
+  },
+  "utilities": { "enabled": true },
+  "paths": {
+    "wallpaperDir": "~/Imágenes/Wallpapers",
+    "lyricsDir": "~/Música/Lyrics/",
+    "sessionGif": "root:/assets/kurukuru.gif",
+    "mediaGif": "root:/assets/bongocat.gif",
+    "noNotifsPic": "root:/assets/dino.png",
+    "lockNoNotifsPic": "root:/assets/dino.png"
+  }
+}
